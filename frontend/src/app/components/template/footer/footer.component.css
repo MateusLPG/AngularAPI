@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    /*jogar o footer pra baixo*/
+    bottom: 000;
+
+    display: flex;
+    /*jogar o conteúdo pro final do footer*/
+    justify-content: flex-end;
+}
+
+/* o > sempre nao aplicar em todos os span */
+.footer > span {
+    font-weight: 450;
+    font-size: 1.3rem;
+}
