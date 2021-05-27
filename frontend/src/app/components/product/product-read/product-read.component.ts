@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
   // No TypeScript, o : defini o tipo
   products: Product[] = [];
-  displayedColumns = ['id', 'name', 'price']
+  displayedColumns = ['id', 'name', 'price', 'action']
   //Injetar o service
   constructor(private ProductService: ProductService) { }
   /* Método iniciado ao iniciar o programa*/

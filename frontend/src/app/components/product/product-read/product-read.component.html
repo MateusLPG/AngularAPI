@@ -21,15 +21,23 @@
         </ng-container>
 
              <!-- Action Column -->
+           <!-- Action Column -->
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef >Ações</th>
                                             <!--Adicionado o Pipe de Currency-->
-            <td mat-cell *matCellDef="let row">{{row.price | currency: 'BRL'}}
-                <a routerLink="">
-                    <i class="material-icons">
+            <!--cada Row é um objeto Product, poderia substituir para product sem problema-->                                
+            <td mat-cell *matCellDef="let row">
+              <!-- Pega o id de um objeto row-->
+                <a routerLink="/products/update/{{ row.id }}">
+                    <i class="material-icons edit">
                         edit
                     </i>
                 </a>
+                <a routerLink="/products/delete/{{ row.id }}">
+                  <i class="material-icons delete">
+                      delete
+                  </i>
+              </a>
             </td>
         </ng-container>
 

@@ -22,7 +22,7 @@ export class ProductService {
       verticalPosition: "top"
     })
   }
-
+//////////////////////////CRUD///////////////////////////////////////
   /*Cria no backend um produto*/
   /*Retorna um Observable do tipo produto ao fazer o Post*/
   create(product: Product): Observable<Product> {
@@ -32,5 +32,23 @@ export class ProductService {
   /* metodo responsavel por ler os produtos do backend */
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl)
+  }
+  //Vai trazer apenas o produto com deterimnado ID
+  readByID(id: string): Observable<Product> {
+    //Cria a url do produto que vai ser direcionada o edit
+    const url = `${this.baseUrl}/${id}` 
+    return this.http.get<Product>(url)
+
+  }
+
+  update(product: Product): Observable<Product> {
+    //const é usada quando queremos um item especifico
+    const url = `${this.baseUrl}/${product.id}` 
+    return this.http.put<Product>(url, product)
+  }
+
+  delete (id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Product>(url)
   }
 }

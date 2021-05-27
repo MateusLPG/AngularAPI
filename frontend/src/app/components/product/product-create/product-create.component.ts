@@ -18,7 +18,7 @@ export class ProductCreateComponent implements OnInit {
 
   product: Product = {
     name: '',
-    price: 0
+    price: 999990
   }
 
   /* Método que chama o Service e acessa um método do Service*/

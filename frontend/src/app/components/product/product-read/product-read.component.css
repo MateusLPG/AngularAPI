@@ -1,3 +1,11 @@
 .tabela {
     width: 100%;
 }
+
+i.edit {
+    color: primary;
+}
+
+i.delete {
+    color: red;
+}
