@@ -10,13 +10,14 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ProductUpdateComponent implements OnInit {
 
+  product: Product;
+
   constructor(
     private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
-  product: Product;
 
   ngOnInit(): void {
     
