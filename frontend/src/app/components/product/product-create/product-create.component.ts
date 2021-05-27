@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product-create',
@@ -15,9 +16,20 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  product: Product = {
+    name: '',
+    price: 0
+  }
+
   /* Método que chama o Service e acessa um método do Service*/
+  /* Ao clicar no botão é acionado esse método */
   createProduct(): void {
-    this.productService.showMessage('Produto criado com sucesso!')
+    /* Esse método chama outro método, que está no service */
+    /* O subscribe serve pra avisar quando é usado */
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage('Produto criado com sucesso!')
+      this.router.navigate(['/products'])
+    })
   }
 
   cancel(): void {
