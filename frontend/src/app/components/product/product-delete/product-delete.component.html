@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Confirmar Exclusão</mat-card-title>
+    <form>
+        <mat-form-field>
+            <!--matInput é uma diretiva-->
+            <!--Utilizando Two Way Data Binding com ngModel que é uma diretiva não estrutural que foi feita a ligação com o nome do produto-->
+            <!--[value] One Way Binding-->
+            <input matInput placeholder="Nome"
+                [value]="product.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <!--O disabled deixa não editável-->
+            <input matInput placeholder="Preço (R$)"
+                [value]="product.price" name="price" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+        Deletar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

@@ -27,7 +27,7 @@
                                             <!--Adicionado o Pipe de Currency-->
             <!--cada Row é um objeto Product, poderia substituir para product sem problema-->                                
             <td mat-cell *matCellDef="let row">
-              <!-- Pega o id de um objeto row-->
+              <!-- Pega o id da row, que é o mesmo do Product-->
                 <a routerLink="/products/update/{{ row.id }}">
                     <i class="material-icons edit">
                         edit

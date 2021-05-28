@@ -34,7 +34,7 @@ export class ProductService {
     return this.http.get<Product[]>(this.baseUrl)
   }
   //Vai trazer apenas o produto com deterimnado ID
-  readByID(id: string): Observable<Product> {
+  readByID(id: number): Observable<Product> {
     //Cria a url do produto que vai ser direcionada o edit
     const url = `${this.baseUrl}/${id}` 
     return this.http.get<Product>(url)
