@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta Bic Preta",
-      "price": 2.5
-    },
-    {
       "id": 2,
       "name": "Notebook Acer",
       "price": 4000
@@ -14,16 +9,6 @@
       "id": 3,
       "name": "Iphone XR",
       "price": 3000
-    },
-    {
-      "id": 4,
-      "name": "Subway Frango",
-      "price": 2.5
-    },
-    {
-      "name": "Subway Carne",
-      "price": "13",
-      "id": 5
     }
   ]
 }
